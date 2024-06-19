@@ -1,6 +1,24 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-grey: rgb(245, 245, 245);
+    --green: #596D48;
+}
+
 body {
     display: flex;
-    margin: 0;
 }
 
 #left {
@@ -17,7 +35,7 @@ body {
 #logo {
     display: flex;
     position: relative;
-    top: 200px;
+    top: 20vh;
     height: 20vh;
     width: 33vw;
     justify-content: center;
@@ -30,10 +48,6 @@ body {
     max-height: 80%;
 }
 
-h1 {
-    color: white;
-}
-
 #credit {
     color: white;
 }
@@ -44,6 +58,98 @@ h1 {
 
 #top {
     height: 34vh;
-    background-color: rgb(240, 240, 240);
-    margin: 0;
+    background-color: var(--light-grey);
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#middle {
+    height: 33vh;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 25rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    padding-left: .5rem;
+    border-radius: 5px;
+    border: #E5E7EB solid 1px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#bottom {
+    height: 33vh;
+    background-color: var(--light-grey);
+    padding-top: 2rem;
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--green);
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    font-size: 1.25em;
+}
+
+#bottom a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: "norsebold";
+    font-size: 7rem;
+    color: white;
+}
+
+input:invalid {
+    border: red solid 1px;
+}
+
+input:focus {
+    border: blue solid 1px;
+    box-shadow: 4px 4px var(--light-grey);
 }
