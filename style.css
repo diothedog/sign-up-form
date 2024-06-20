@@ -36,7 +36,7 @@ body {
     display: flex;
     position: relative;
     top: 20vh;
-    height: 20vh;
+    height: 15vh;
     width: 33vw;
     justify-content: center;
     align-items: center;
@@ -59,34 +59,35 @@ body {
 #top {
     height: 34vh;
     background-color: var(--light-grey);
-    padding-top: 10rem;
-    padding-left: 5rem;
-    padding-right: 10rem;
+    padding-top: 15vh;
+    padding-left: 4vw;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
     display: flex;
     flex-direction: column;
 }
 
 .intro {
-    margin-bottom: 2rem;
+    margin-bottom: 2vh;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5vmin;
 }
 
 #middle {
     height: 33vh;
-    padding-top: 2rem;
-    padding-left: 5rem;
-    padding-right: 30rem;
+    padding-top: 2vh;
+    padding-left: 4vw;
+    padding-right: 15vw;
     display: flex;
     flex-direction: column;
 }
 
 input {
-    width: 25rem;
-    height: 2.5rem;
-    font-size: 1.25rem;
+    width: 20vw;
+    height: 3vh;
+    font-size: 1.5vmin;
     padding-left: .5rem;
     border-radius: 5px;
     border: #E5E7EB solid 1px;
@@ -99,38 +100,43 @@ input {
 
 label {
     display: block;
+    font-size: 1.5vmin;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 2vw;
+    margin-top: 2vh;
 }
 
 #bottom {
     height: 33vh;
     background-color: var(--light-grey);
-    padding-top: 2rem;
-    padding-left: 5rem;
+    padding-top: 3vh;
+    padding-left: 4vw;
     display: flex;
     flex-direction: column;
 }
 
 button {
-    width: 20rem;
-    height: 3rem;
+    width: 15vw;
+    height: 5vh;
     background-color: var(--green);
     color: white;
-    font-size: 1.25rem;
+    font-size: 2vmin;
     border-radius: 10px;
-    margin-bottom: 3rem;
+    margin-bottom: 3vh;
 }
 
 p {
-    margin-bottom: 2rem;
-    font-size: 1.25em;
+    margin-bottom: 2vh;
+    font-size: 2vmin;
+}
+
+#credit {
+    font-size: 1.5vmin;
 }
 
 #bottom a {
@@ -141,15 +147,23 @@ p {
 
 h1 {
     font-family: "norsebold";
-    font-size: 7rem;
+    font-size: 8vmin;
     color: white;
 }
 
-input:invalid {
+#password:invalid,
+#confirm:invalid {
     border: red solid 1px;
 }
 
-input:focus {
-    border: blue solid 1px;
-    box-shadow: 4px 4px var(--light-grey);
+#password:invalid::after {
+    content: "* Passwords do not match";
+    color: red;
 }
+
+input:focus {
+    border: rgb(49, 49, 238) solid 1px;
+    box-shadow: 4px 4px var(--light-grey);
+    outline: none;
+}
+
